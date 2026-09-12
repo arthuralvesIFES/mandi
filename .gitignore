@@ -1,0 +1,19 @@
+# Capturas e dados temporários de validação local
+output/
+.playwright-cli/
+
+# Configurações e artefatos locais
+.vercel/
+node_modules/
+*.log
+
+# Arquivos de editor e sistema operacional
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Rascunho local que não é usado pelo site
+12 meses.txt
+1 mes/carta.pdf
+1 mes/carta1.txt

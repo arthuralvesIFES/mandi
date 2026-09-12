@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="O nosso pequeno arquivo de memórias — Arthur e Amanda."
+    />
+    <title>Arthur & Amanda — nosso cantinho</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-heading">
+          <h1 id="page-title">Arthur <span>&</span> Amanda</h1>
+        </div>
+      </section>
+
+      <section class="memories" id="memorias" aria-labelledby="memories-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="memories-title">nossa <em>história</em></h2>
+          </div>
+        </div>
+
+        <div class="month-grid" id="month-grid"></div>
+      </section>
+
+      <section class="promise" aria-label="Momentos de Arthur e Amanda">
+        <div class="photo-conveyor" aria-label="Fotos de Arthur e Amanda passando em sequência">
+          <div class="conveyor-track" id="conveyor-track"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>feito com amor, por Arthur para Amanda <span>♥</span></footer>
+
+    <dialog class="memory-dialog" id="memory-dialog" aria-labelledby="dialog-title">
+      <button class="close-button" id="close-dialog" aria-label="Fechar">×</button>
+      <div class="dialog-content">
+        <h2 id="dialog-title"></h2>
+        <div class="letter">
+          <button class="letter-button" id="letter-button" type="button" aria-label="Ampliar carta" hidden>
+            <img class="letter-image" id="letter-image" alt="Carta escrita à mão" />
+          </button>
+          <p id="letter-text"></p>
+          <span class="letter-signature">com carinho, Arthur</span>
+        </div>
+        <div class="photo-strip" id="photo-strip"></div>
+      </div>
+    </dialog>
+
+    <template id="month-template">
+      <article class="month-card">
+        <button class="folder" type="button">
+          <span class="folder-tab"></span>
+          <span class="folder-back" aria-hidden="true"></span>
+          <span class="folder-preview" aria-hidden="true">
+            <span class="folder-preview-photo"></span>
+            <span class="folder-preview-photo"></span>
+            <span class="folder-preview-photo"></span>
+            <span class="folder-preview-photo"></span>
+            <span class="folder-preview-photo"></span>
+          </span>
+          <span class="folder-face">
+            <span class="folder-copy">
+              <span class="month-number"></span>
+              <span class="month-name"></span>
+            </span>
+            <span class="rose rose-small" aria-hidden="true">
+              <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span>
+              <span class="petal p4"></span><span class="petal p5"></span><span class="rose-center"></span>
+              <span class="stem"></span><span class="leaf leaf-left"></span><span class="leaf leaf-right"></span>
+            </span>
+          </span>
+        </button>
+      </article>
+    </template>
+
+    <template id="photo-template">
+      <figure class="polaroid"><button class="photo-button" type="button"><img class="photo-image" alt="" loading="lazy" /></button><figcaption></figcaption></figure>
+    </template>
+
+    <dialog class="photo-lightbox" id="photo-lightbox" aria-label="Foto ampliada">
+      <button class="lightbox-close" id="close-lightbox" aria-label="Fechar foto">×</button>
+      <img class="lightbox-image" id="lightbox-image" alt="" />
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
