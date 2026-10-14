@@ -84,3 +84,4 @@ footer { padding: 21px 24px; text-align: center; color: var(--muted); font: 10px
 
 .letter-signature[hidden], .letter-button[hidden] { display: none !important; }
 .letter-button { display: block; max-width: 100%; margin: 0 auto; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.photo-strip-without-letter { margin-top: 0; }

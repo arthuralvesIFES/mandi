@@ -19,6 +19,7 @@ const months = [
   {
     period: "14/09/26 — 13/10/26",
     name: "2º mês",
+    showLetter: false,
     letter: "",
     photos: [
       { src: "2 mes/1.jpeg" },
@@ -90,7 +91,9 @@ function openMemory(month) {
   const letter = document.querySelector(".letter");
   const letterText = document.querySelector("#letter-text");
   const signature = letter.querySelector(".letter-signature");
+  const hasLetter = month.showLetter !== false;
   const hasLetterImage = Boolean(month.letterImage);
+  letter.hidden = !hasLetter;
   letter.classList.toggle("letter-with-image", hasLetterImage);
   letterButton.hidden = !hasLetterImage;
   letterText.hidden = hasLetterImage;
@@ -102,6 +105,7 @@ function openMemory(month) {
     letterText.textContent = month.letter;
   }
   const photoStrip = document.querySelector("#photo-strip");
+  photoStrip.classList.toggle("photo-strip-without-letter", !hasLetter);
   photoStrip.replaceChildren();
 
   month.photos.forEach(({ src, caption = "" }) => {
