@@ -16,6 +16,15 @@ const months = [
       { src: "1 mes/WhatsApp Image 2026-09-12 at 09.30.15.jpeg" },
     ],
   },
+  {
+    period: "14/09/26 — 13/10/26",
+    name: "2º mês",
+    letter: "",
+    photos: [
+      { src: "2 mes/1.jpeg" },
+      { src: "2 mes/2.jpeg" },
+    ],
+  },
 ];
 
 const monthGrid = document.querySelector("#month-grid");
@@ -85,7 +94,7 @@ function openMemory(month) {
   letter.classList.toggle("letter-with-image", hasLetterImage);
   letterButton.hidden = !hasLetterImage;
   letterText.hidden = hasLetterImage;
-  signature.hidden = hasLetterImage;
+  signature.hidden = hasLetterImage || !month.letter;
   if (hasLetterImage) {
     letterImage.src = month.letterImage;
   } else {
